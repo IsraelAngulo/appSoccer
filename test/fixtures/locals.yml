@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  descriptiveNameLocal: MyString
+  address: MyString
+  addressinGoogleMaps: MyString
+  telephone: MyString
+
+two:
+  descriptiveNameLocal: MyString
+  address: MyString
+  addressinGoogleMaps: MyString
+  telephone: MyString

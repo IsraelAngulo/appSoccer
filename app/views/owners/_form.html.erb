@@ -1,0 +1,19 @@
+<%= simple_form_for(@owner) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :name , :label => 'Name:', :required => true, :input_html => { :maxlength => 20 }  %>
+    <%= f.input :firtsName , :label => 'Firts Name:', :required => true, :input_html => { :maxlength => 15 } %>
+    <%= f.input :secondName , :label => 'Second Name:' , :input_html => { :maxlength => 15 } %>
+    <%= f.association :typedocument , :label => 'Type Document:', :required => true %>
+	<%= f.association :sex , :label => 'Sex:', :required => true %>
+    <%= f.input :numeroDOI , :label => 'Number Document:', :required => true, :input_html => { :maxlength => 10 } %>
+    <%= f.input :email , :label => 'Email:' , :input_html => { :maxlength => 30 }%>
+    <%= f.input :phone , :label => 'Phone:', :input_html => { :maxlength => 10 } %>
+    <%= f.input :password, :hint => false, :error_html => { :id => "password_error"}, :required => true, :input_html => { :maxlength => 15 } %>
+    <%= f.input :birthday , :label => 'Your Birthday please' %>
+  </div>
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

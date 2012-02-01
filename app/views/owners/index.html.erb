@@ -1,0 +1,41 @@
+<h1>Listing owners</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Firtsname</th>
+    <th>Secondname</th>
+    <th>Sex</th>
+    <th>Typedoi</th>
+    <th>Numerodoi</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Password</th>
+    <th>Birthday</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @owners.each do |owner| %>
+  <tr>
+    <td><%= owner.name %></td>
+    <td><%= owner.firtsName %></td>
+    <td><%= owner.secondName %></td>
+    <td><%= owner.sex.name %></td>
+    <td><%= owner.typedocument.name %></td>
+    <td><%= owner.numeroDOI %></td>
+    <td><%= owner.email %></td>
+    <td><%= owner.phone %></td>
+    <td><%= owner.password %></td>
+    <td><%= owner.birthday %></td>
+    <td><%= link_to 'Show', owner %></td>
+	<td><%= link_to 'Edit', edit_owner_path(owner) %></td>
+    <td><%= link_to 'Destroy', owner, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Owner', new_owner_path %>

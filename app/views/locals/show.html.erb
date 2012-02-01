@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Descriptivenamelocal:</b>
+  <%= @local.descriptiveNameLocal %>
+</p>
+
+<p>
+  <b>Typedoi:</b>
+  <%= @owner.district.name %>
+</p>
+<p>
+  <b>Address:</b>
+  <%= @local.address %>
+</p>
+
+<p>
+  <b>Addressingooglemaps:</b>
+  <%= @local.addressinGoogleMaps %>
+</p>
+
+<p>
+  <b>Telephone:</b>
+  <%= @local.telephone %>
+</p>
+
+
+<%= link_to 'Edit', edit_local_path(@local) %> |
+<%= link_to 'Back', locals_path %>

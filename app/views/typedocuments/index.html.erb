@@ -1,0 +1,23 @@
+<h1>Listing typedocuments</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @typedocuments.each do |typedocument| %>
+  <tr>
+    <td><%= typedocument.name %></td>
+    <td><%= link_to 'Show', typedocument %></td>
+    <td><%= link_to 'Edit', edit_typedocument_path(typedocument) %></td>
+    <td><%= link_to 'Destroy', typedocument, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Typedocument', new_typedocument_path %>
