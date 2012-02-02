@@ -1,4 +1,6 @@
 AppSoccer::Application.routes.draw do
+  resources :customers
+
   resources :locals
 
   resources :districts
