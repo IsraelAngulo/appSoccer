@@ -1,0 +1,13 @@
+rails g scaffold customer name:string firtsName:string second Name:string numeroDOI:integer address:string email:string password:string birthday:date phone:integer
+
+rake db:migrate
+
+rails g migration add_typedocument_id_to_customers typedocument_id:integer
+
+rails g migration add_sex_id_to_customers sex_id:integer
+
+rails g migration add_district_id_to_customers district_id:integer
+
+rake db:migrate
+
+rails s

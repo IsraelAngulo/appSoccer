@@ -1,0 +1,12 @@
+<%= simple_form_for(@photo) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :route %>
+    <%= f.input :date %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

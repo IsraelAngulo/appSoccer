@@ -1,0 +1,16 @@
+<%= simple_form_for(@field) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :name %>
+    <%= f.input :day %>
+    <%= f.input :starname %>
+    <%= f.input :endtime %>
+    <%= f.input :dayprice %>
+    <%= f.input :nightprice %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

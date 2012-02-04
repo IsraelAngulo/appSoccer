@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Route:</b>
+  <%= @photo.route %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @photo.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>

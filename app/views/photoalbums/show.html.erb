@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @photoalbum.name %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @photoalbum.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_photoalbum_path(@photoalbum) %> |
+<%= link_to 'Back', photoalbums_path %>

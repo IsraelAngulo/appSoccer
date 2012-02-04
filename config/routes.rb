@@ -1,4 +1,14 @@
 AppSoccer::Application.routes.draw do
+  resources :photos
+
+  resources :photoalbums
+
+  resources :parties
+
+  resources :fields
+
+  get "soccer_field_search/index"
+
   resources :customers
 
   resources :locals

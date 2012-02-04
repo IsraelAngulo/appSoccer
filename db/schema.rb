@@ -11,13 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120202204735) do
+ActiveRecord::Schema.define(:version => 20120131055613) do
 
   create_table "customers", :force => true do |t|
     t.string   "name"
     t.string   "firtsName"
     t.string   "secondName"
-    t.string   "numeroDOI"
+    t.integer  "numeroDOI"
     t.string   "address"
     t.string   "email"
     t.string   "password"
@@ -32,6 +32,17 @@ ActiveRecord::Schema.define(:version => 20120202204735) do
 
   create_table "districts", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "fields", :force => true do |t|
+    t.string   "name"
+    t.date     "day"
+    t.time     "starname"
+    t.time     "endtime"
+    t.float    "dayprice"
+    t.float    "nightprice"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -61,6 +72,29 @@ ActiveRecord::Schema.define(:version => 20120202204735) do
     t.datetime "updated_at",      :null => false
     t.integer  "typedocument_id"
     t.integer  "sex_id"
+  end
+
+  create_table "parties", :force => true do |t|
+    t.string   "name"
+    t.string   "award"
+    t.integer  "limitvolumeteam"
+    t.date     "limitdateregistration"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+  end
+
+  create_table "photoalbums", :force => true do |t|
+    t.string   "name"
+    t.date     "date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "photos", :force => true do |t|
+    t.string   "route"
+    t.date     "date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "sexes", :force => true do |t|

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  award: MyString
+  limitvolumeteam: 1
+  limitdateregistration: 2012-01-31
+
+two:
+  name: MyString
+  award: MyString
+  limitvolumeteam: 1
+  limitdateregistration: 2012-01-31

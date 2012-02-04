@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  day: 2012-01-31
+  starname: 2012-01-31 00:42:38
+  endtime: 2012-01-31 00:42:38
+  dayprice: 1.5
+  nightprice: 1.5
+
+two:
+  name: MyString
+  day: 2012-01-31
+  starname: 2012-01-31 00:42:38
+  endtime: 2012-01-31 00:42:38
+  dayprice: 1.5
+  nightprice: 1.5

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @field.name %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%= @field.day %>
+</p>
+
+<p>
+  <b>Starname:</b>
+  <%= @field.starname %>
+</p>
+
+<p>
+  <b>Endtime:</b>
+  <%= @field.endtime %>
+</p>
+
+<p>
+  <b>Dayprice:</b>
+  <%= @field.dayprice %>
+</p>
+
+<p>
+  <b>Nightprice:</b>
+  <%= @field.nightprice %>
+</p>
+
+
+<%= link_to 'Edit', edit_field_path(@field) %> |
+<%= link_to 'Back', fields_path %>

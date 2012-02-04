@@ -1,0 +1,2 @@
+module SoccerFieldSearchHelper
+end

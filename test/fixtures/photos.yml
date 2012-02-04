@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  route: MyString
+  date: 2012-01-31
+
+two:
+  route: MyString
+  date: 2012-01-31

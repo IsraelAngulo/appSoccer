@@ -1,0 +1,14 @@
+<%= simple_form_for(@party) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :name %>
+    <%= f.input :award %>
+    <%= f.input :limitvolumeteam %>
+    <%= f.input :limitdateregistration %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
