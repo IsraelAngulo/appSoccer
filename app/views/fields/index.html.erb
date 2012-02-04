@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+	<th>Local</th>
     <th>Name</th>
     <th>Day</th>
     <th>Starname</th>
@@ -15,6 +16,7 @@
 
 <% @fields.each do |field| %>
   <tr>
+	<td><%= field.local.descriptiveNameLocal %></td>
     <td><%= field.name %></td>
     <td><%= field.day %></td>
     <td><%= field.starname %></td>

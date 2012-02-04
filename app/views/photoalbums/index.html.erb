@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+	<th>Field</th>
     <th>Name</th>
     <th>Date</th>
     <th></th>
@@ -11,6 +12,7 @@
 
 <% @photoalbums.each do |photoalbum| %>
   <tr>
+	<td><%= photoalbum.field.name %></td>
     <td><%= photoalbum.name %></td>
     <td><%= photoalbum.date %></td>
     <td><%= link_to 'Show', photoalbum %></td>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120131055613) do
+ActiveRecord::Schema.define(:version => 20120204224207) do
 
   create_table "customers", :force => true do |t|
     t.string   "name"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20120131055613) do
     t.float    "nightprice"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "local_id"
   end
 
   create_table "locals", :force => true do |t|
@@ -86,8 +87,9 @@ ActiveRecord::Schema.define(:version => 20120131055613) do
   create_table "photoalbums", :force => true do |t|
     t.string   "name"
     t.date     "date"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "field_id"
   end
 
   create_table "photos", :force => true do |t|
