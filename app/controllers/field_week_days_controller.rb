@@ -1,0 +1,2 @@
+class FieldWeekDaysController < ApplicationController
+end

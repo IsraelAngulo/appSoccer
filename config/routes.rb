@@ -1,4 +1,8 @@
 AppSoccer::Application.routes.draw do
+  resources :field_week_days
+
+  resources :week_days
+
   resources :photos
 
   resources :photoalbums
