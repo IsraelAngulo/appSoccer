@@ -1,13 +1,11 @@
 class OwnersController < ApplicationController
   # GET /owners
   # GET /owners.json
-  def index
-    @owners = Owner.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @owners }
-    end
+
+   def index
+    @search = Owner.search(params[:search])   
+    @owners = @search.all  
   end
 
   # GET /owners/1

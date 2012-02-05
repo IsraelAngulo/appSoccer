@@ -1,15 +1,11 @@
 class DistrictsController < ApplicationController
   # GET /districts
   # GET /districts.json
-  def index
-    @districts = District.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @districts }
-    end
+   def index
+    @search = District.search(params[:search])   
+    @districts = @search.all  
   end
-
   # GET /districts/1
   # GET /districts/1.json
   def show

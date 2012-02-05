@@ -1,13 +1,10 @@
 class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
-  def index
-    @customers = Customer.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @customers }
-    end
+  def index
+    @search = Customer.search(params[:search])   
+    @customers = @search.all  
   end
 
   # GET /customers/1

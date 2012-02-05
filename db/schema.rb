@@ -87,8 +87,8 @@ ActiveRecord::Schema.define(:version => 20120204224207) do
   create_table "photoalbums", :force => true do |t|
     t.string   "name"
     t.date     "date"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.integer  "field_id"
   end
 
