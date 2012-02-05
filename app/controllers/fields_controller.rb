@@ -1,8 +1,16 @@
 class FieldsController < ApplicationController
   # GET /fields
   # GET /fields.json
-  def index
-    @fields = Field.all
+  
+   
+def index
+    @search = Field.search(params[:search])   
+    @fields = @search.all  
+  end
+
+  
+  def search
+    @field = Field.find(params[:id])
 
     respond_to do |format|
       format.html # index.html.erb

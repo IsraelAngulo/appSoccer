@@ -1,7 +1,19 @@
 <h1>Listing fields</h1>
 
+<%= form_for @search do |f| %>   
+	<p>   
+	<%= f.label :distric_contains %>   
+	<%= f.text_field :local_district_name_contains %>   
+	</p>   
+	<p class="button"><%= f.submit "Search" %> </p>   
+<% end %> 
+
+<br/>
+
 <table>
+
   <tr>
+  	<th>District</th>
 	<th>Local</th>
     <th>Name</th>
     <th>Day</th>
@@ -16,6 +28,7 @@
 
 <% @fields.each do |field| %>
   <tr>
+	<td><%= field.local.district.name %></td>
 	<td><%= field.local.descriptiveNameLocal %></td>
     <td><%= field.name %></td>
     <td><%= field.day %></td>
@@ -31,5 +44,6 @@
 </table>
 
 <br />
+
 
 <%= link_to 'New Field', new_field_path %>
