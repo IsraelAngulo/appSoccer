@@ -1,5 +1,31 @@
 <h1>Listing customers</h1>
 
+
+<%= form_for @search do |f| %>   
+<p>   
+<%= f.label :name_contains %>   
+<%= f.text_field :name_contains %>   
+</p> 
+<p>   
+<%= f.label :firtsName_contains %>   
+<%= f.text_field :firtsName_contains %>   
+</p>
+<p>   
+<%= f.label :secondName_contains %>   
+<%= f.text_field :secondName_contains %>   
+</p> 
+<p> 
+<%= f.label :sex_name_contains %>  
+<%= f.text_field :sex_name_contains %>
+</p>
+<p> 
+<%= f.label :typedocument_name_contains %>  
+<%= f.text_field :typedocument_name_contains %>
+</p>
+<p class="button"><%= f.submit "Search" %> </p>   
+<% end %> 
+
+
 <table>
   <tr>
     <th>Name</th>
@@ -43,27 +69,3 @@
 <br />
 
 <%= link_to 'New Customer', new_customer_path %>
-
-<%= form_for @search do |f| %>   
-<p>   
-<%= f.label :name_contains %>   
-<%= f.text_field :name_contains %>   
-</p> 
-<p>   
-<%= f.label :firtsName_contains %>   
-<%= f.text_field :firtsName_contains %>   
-</p>
-<p>   
-<%= f.label :secondName_contains %>   
-<%= f.text_field :secondName_contains %>   
-</p> 
-<p> 
-<%= f.label :sex_name_contains %>  
-<%= f.text_field :sex_name_contains %>
-</p>
-<p> 
-<%= f.label :typedocument_name_contains %>  
-<%= f.text_field :typedocument_name_contains %>
-</p>
-<p class="button"><%= f.submit "Search" %> </p>   
-<% end %> 

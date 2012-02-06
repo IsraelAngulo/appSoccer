@@ -17,7 +17,7 @@
 	<th>Local</th>
     <th>Name</th>
     <th>Day</th>
-    <th>Starname</th>
+    <th>Startime</th>
     <th>Endtime</th>
     <th>Dayprice</th>
     <th>Nightprice</th>
@@ -32,8 +32,8 @@
 	<td><%= field.local.descriptiveNameLocal %></td>
     <td><%= field.name %></td>
     <td><%= field.day %></td>
-    <td><%= field.starname %></td>
-    <td><%= field.endtime %></td>
+    <td><%= field.starname.strftime("%l:%M %p") %></td>
+    <td><%= field.endtime.strftime("%l:%M %p") %></td>
     <td><%= field.dayprice %></td>
     <td><%= field.nightprice %></td>
     <td><%= link_to 'Show', field %></td>

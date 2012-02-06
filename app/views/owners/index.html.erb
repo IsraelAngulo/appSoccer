@@ -1,5 +1,29 @@
 <h1>Listing owners</h1>
 
+<%= form_for @search do |f| %>   
+<p>   
+<%= f.label :name_contains %>   
+<%= f.text_field :name_contains %>   
+</p> 
+<p>   
+<%= f.label :firtsName_contains %>   
+<%= f.text_field :firtsName_contains %>   
+</p>
+<p>   
+<%= f.label :secondName_contains %>   
+<%= f.text_field :secondName_contains %>   
+</p>  
+<p> 
+<%= f.label :sex_name_contains %>  
+<%= f.text_field :sex_name_contains %>
+</p>
+<p> 
+<%= f.label :typedocument_name_contains %>  
+<%= f.text_field :typedocument_name_contains %>
+</p>
+<p class="button"><%= f.submit "Search" %> </p>   
+<% end %>
+
 <table>
   <tr>
     <th>Name</th>
@@ -28,7 +52,7 @@
     <td><%= owner.email %></td>
     <td><%= owner.phone %></td>
     <td><%= owner.password %></td>
-    <td><%= owner.birthday %></td>
+    <td><%= owner.birthday.strftime("%d/%m/%Y") %></td>
     <td><%= link_to 'Show', owner %></td>
 	<td><%= link_to 'Edit', edit_owner_path(owner) %></td>
     <td><%= link_to 'Destroy', owner, confirm: 'Are you sure?', method: :delete %></td>
@@ -40,29 +64,7 @@
 
 <%= link_to 'New Owner', new_owner_path %>
 
-<%= form_for @search do |f| %>   
-<p>   
-<%= f.label :name_contains %>   
-<%= f.text_field :name_contains %>   
-</p> 
-<p>   
-<%= f.label :firtsName_contains %>   
-<%= f.text_field :firtsName_contains %>   
-</p>
-<p>   
-<%= f.label :secondName_contains %>   
-<%= f.text_field :secondName_contains %>   
-</p>  
-<p> 
-<%= f.label :sex_name_contains %>  
-<%= f.text_field :sex_name_contains %>
-</p>
-<p> 
-<%= f.label :typedocument_name_contains %>  
-<%= f.text_field :typedocument_name_contains %>
-</p>
-<p class="button"><%= f.submit "Search" %> </p>   
-<% end %>
+
 
 
 

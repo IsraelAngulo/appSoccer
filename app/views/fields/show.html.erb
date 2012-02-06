@@ -11,13 +11,13 @@
 </p>
 
 <p>
-  <b>Starname:</b>
-  <%= @field.starname %>
+  <b>Startime:</b>
+  <%= @field.starname.strftime("%l:%M %p") %>
 </p>
 
 <p>
   <b>Endtime:</b>
-  <%= @field.endtime %>
+  <%= @field.endtime.strftime("%l:%M %p") %>
 </p>
 
 <p>
