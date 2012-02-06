@@ -1,0 +1,27 @@
+<h1>Listing hires</h1>
+
+<table>
+  <tr>
+    <th>Field</th>
+    <th>Daycare</th>
+    <th>Hourscare</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hires.each do |hire| %>
+  <tr>
+    <td><%= hire.field.name %></td>
+    <td><%= hire.dayCare %></td>
+    <td><%= hire.hoursCare %></td>
+    <td><%= link_to 'Show', hire %></td>
+    <td><%= link_to 'Edit', edit_hire_path(hire) %></td>
+    <td><%= link_to 'Destroy', hire, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hire', new_hire_path %>

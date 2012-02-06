@@ -1,4 +1,6 @@
 AppSoccer::Application.routes.draw do
+  resources :hires
+
   resources :field_week_days
 
   resources :week_days

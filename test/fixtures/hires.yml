@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  field_id: 1
+  dayCare: 2012-02-05
+  hoursCare: 2012-02-05 19:01:21
+
+two:
+  field_id: 1
+  dayCare: 2012-02-05
+  hoursCare: 2012-02-05 19:01:21

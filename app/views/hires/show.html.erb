@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Field:</b>
+  <%= @hire.field.name %>
+</p>
+
+<p>
+  <b>Daycare:</b>
+  <%= @hire.dayCare %>
+</p>
+
+<p>
+  <b>Hourscare:</b>
+  <%= @hire.hoursCare %>
+</p>
+
+
+<%= link_to 'Edit', edit_hire_path(@hire) %> |
+<%= link_to 'Back', hires_path %>
