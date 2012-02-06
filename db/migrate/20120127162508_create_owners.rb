@@ -10,7 +10,7 @@ class CreateOwners < ActiveRecord::Migration
       t.string :email
       t.integer :phone
       t.string :password
-      t.datetime :birthday
+      t.date :birthday
 
       t.timestamps
     end
