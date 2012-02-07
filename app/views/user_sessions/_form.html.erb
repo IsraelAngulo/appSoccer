@@ -1,0 +1,18 @@
+<%= simple_form_for(@user_session) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+
+    <%= f.input :username %>
+
+  </div>
+  
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

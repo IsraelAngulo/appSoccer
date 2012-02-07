@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120206000121) do
+ActiveRecord::Schema.define(:version => 20120207221340) do
 
   create_table "customers", :force => true do |t|
     t.string   "name"
@@ -83,7 +83,7 @@ ActiveRecord::Schema.define(:version => 20120206000121) do
     t.string   "email"
     t.integer  "phone"
     t.string   "password"
-    t.datetime "birthday"
+    t.date     "birthday"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "typedocument_id"
@@ -102,15 +102,20 @@ ActiveRecord::Schema.define(:version => 20120206000121) do
   create_table "photoalbums", :force => true do |t|
     t.string   "name"
     t.date     "date"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-    t.string   "field_id_integer"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.integer  "field_id"
   end
 
   create_table "photos", :force => true do |t|
     t.string   "route"
     t.date     "date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "portals", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -125,6 +130,30 @@ ActiveRecord::Schema.define(:version => 20120206000121) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "user_sessions", :force => true do |t|
+    t.string   "username"
+    t.string   "password"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "documentnumber"
+    t.string   "email"
+    t.string   "emailconfirmation"
+    t.date     "datebirth"
+    t.string   "phone"
+    t.string   "username"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "week_days", :force => true do |t|
