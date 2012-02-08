@@ -1,0 +1,148 @@
+body {
+	background: url(Images/bg-body.jpg) repeat;
+}
+a:link, a:visited {
+	text-decoration:none;
+	color:inherit;
+}
+img {
+	border:none;
+}
+.form-item {
+	position:absolute;
+	height:20px;
+}
+.form-button {
+	position:absolute;
+}
+.form-label {
+	width:120px;
+	font: normal 12px/20px Arial;
+	color:#000;
+}
+.form-title {
+	font: bold 18px/20px Arial;
+	text-decoration:underline;
+	color:#000;
+}
+.form-input {
+	width:100%;
+	height:14px;
+	font: normal 12px/20px Arial;
+	color:#000;
+}
+.form-listbox {
+	width:100%;
+	height:20px;
+	font: normal 12px/20px Arial;
+	color:#000;
+}
+.form-table {
+	width:520px;
+	padding:0px;
+	margin:0px;
+	border:none;
+}
+.form-table-row {
+	height:36px;
+	vertical-align:text-top;
+}
+.form-result {
+	width:920px;
+	padding:0px;
+	margin:0px;
+}
+.form-result-header {
+	background:#045404;
+	height:36px;
+	font:bold 14px/36px Arial;
+	text-align:center;
+	color:#fff;
+	vertical-align:middle;
+}
+.form-result-row, .form-result-alter {
+	height:24px;
+	font:normal 10px/24px Arial;
+	text-align:center;
+	vertical-align:middle;
+}
+.form-result-alter {
+	background: #c7fac7;
+}
+/* */
+.login {
+	position:absolute;
+	left:640px;
+	top:360px;
+	width:480px;
+	height:244px;
+	z-index:1;
+	background-image: url(Images/bg-login.png);
+}
+.player-1 {
+	position:absolute;
+	left:120px;
+	top:80px;
+	width:480px;
+	height:640px;
+	z-index:2;
+}
+/* */
+.header {
+	position:absolute;
+	background: #000;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:120px;
+}
+.page {
+	position:absolute;
+	background: #fff;
+	left:610px;
+	top:120px;
+	width:920px;
+	height:560px;
+	padding:160px 30px 0px 30px;
+	margin:0px -460px;
+	z-index:1;
+}
+.page .menu {
+	position:absolute;
+	background: url(Images/bg-menu.png) no-repeat top center;;
+	left:-22px;
+	top:20px;
+	width:1024px;
+	height:100px;
+	z-index:2;
+}
+.menu ul {
+	padding:0px 20px;;
+	margin:0px;
+	list-style:none;
+}
+.menu li {
+	height:48px;
+	padding:0px 10px;
+	margin:12px 0px;
+	border-left:1px solid #fff;
+	border-right:1px solid #fff;
+	font: bold normal 18px/48px Arial;
+	color:#ff6;
+	float:left;
+}
+.player-2 {
+	position:absolute;
+	left:640px;
+	top:200px;
+	width:240px;
+	height:480px;
+}
+.player-3 {
+	position:absolute;
+	left:560px;
+	top:180px;
+	width:400px;
+	height:200px;
+}
+/* */

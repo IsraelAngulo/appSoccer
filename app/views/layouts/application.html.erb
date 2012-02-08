@@ -5,9 +5,16 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  
+  <link href="../assets/styles.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+	body {
+		background:#000 url(../assets/Images/bg-index.jpg) no-repeat center 60px;
+	}
+  </style>
 </head>
 <body>
-<div id="user_nav">
+<div id="user_nav" style="color:#00F">
      <% if current_user %>
           <%= link_to "Edit Profile", edit_user_path(:current) %> |
           <%= link_to "Logout", logout_path %>
@@ -19,5 +26,6 @@
 
 <%= yield %>
 
+<div class="player-1"><img src="../assets/Images/player-1.png" width="480" height="640" alt="" /></div>
 </body>
 </html>
