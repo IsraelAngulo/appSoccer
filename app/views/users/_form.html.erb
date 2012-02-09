@@ -22,6 +22,14 @@
     <%= f.input :username %>
 
   </div>
+  
+  <div>
+	<select name="post[perfil]">
+      <option value="dueno">Due&ntilde;o</option>
+      <option value="usuario">Usuario</option>
+	</select>
+  </div>
+  
   <div class="field">
          <%= f.label :password %><br />
          <%= f.password_field :password %>
