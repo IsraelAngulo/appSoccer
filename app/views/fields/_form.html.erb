@@ -1,7 +1,8 @@
 <%= simple_form_for(@field) do |f| %>
   <%= f.error_notification %>
-
+  <%= current_user.username %>
   <div class="inputs">
+    <%= f.input :dueno %>
 	<%= f.association :local %>
     <%= f.input :name %>
     <%= f.input :day %>
