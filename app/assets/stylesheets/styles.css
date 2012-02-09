@@ -74,10 +74,10 @@ img {
 	position:absolute;
 	left:640px;
 	top:360px;
-	width:480px;
-	height:244px;
+	/*width:480px;
+	height:244px;*/
 	z-index:1;
-	background-image: url(Images/bg-login.png);
+	background-image: url(Images/canchafutbol2.jpg);
 }
 .player-1 {
 	position:absolute;
