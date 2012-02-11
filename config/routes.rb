@@ -1,4 +1,15 @@
 AppSoccer::Application.routes.draw do
+  resources :user_sessions
+
+  resources :portals
+  
+  root :to => "portals#index"
+  
+  match "portales" => "portals#index"
+  match "login" => "user_sessions#new"
+  match "logout" => "user_sessions#destroy"
+
+
   resources :users
 
   resources :hires
