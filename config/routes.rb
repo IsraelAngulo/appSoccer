@@ -10,7 +10,8 @@ AppSoccer::Application.routes.draw do
   match "portales" => "portals#index"
   match "login" => "user_sessions#new"
   match "logout" => "user_sessions#destroy"
-
+  match "duenonew" => "owners#new"
+  match "customersnew" => "customer#new"
 
   resources :users
 

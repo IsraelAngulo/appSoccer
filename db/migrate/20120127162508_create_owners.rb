@@ -7,9 +7,7 @@ class CreateOwners < ActiveRecord::Migration
       t.string :sex
       t.integer :typeDOI
       t.integer :numeroDOI
-      t.string :email
       t.integer :phone
-      t.string :password
       t.date :birthday
 
       t.timestamps

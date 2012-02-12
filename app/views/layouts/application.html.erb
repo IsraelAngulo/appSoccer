@@ -9,6 +9,7 @@
 <body>
 <div id="user_nav">
 	<% if current_user %>
+		Bienvenido: <%= current_user.username %> |
           <%= link_to "Edit Profile", edit_user_path(:current) %> |
           <%= link_to "Logout", logout_path %>
      <% else %>

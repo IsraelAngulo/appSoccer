@@ -44,7 +44,11 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to portales_url, notice: 'Registration successful.' }
+		if current_user.typeuser_id == 1
+			format.html { redirect_to duenonew_url, notice: 'Registration successful.' }
+		else
+			format.html { redirect_to customersnew_url, notice: 'Registration successful.' }
+		end
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }

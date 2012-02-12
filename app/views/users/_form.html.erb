@@ -32,11 +32,11 @@
          <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :typeuser %><br />
+    <%= f.label :typeuser %>
     <%= f.collection_select :typeuser_id, Typeuser.all, :id, :nameDescription, :prompt => true %>
   </div>
   
   <div class="actions">
-    <%= f.button :submit %>
+    <%= f.button "Siguiente" %>
   </div>
 <% end %>
