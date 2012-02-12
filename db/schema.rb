@@ -19,8 +19,6 @@ ActiveRecord::Schema.define(:version => 20120212002652) do
     t.string   "secondName"
     t.integer  "numeroDOI"
     t.string   "address"
-    t.string   "email"
-    t.string   "password"
     t.date     "birthday"
     t.integer  "phone"
     t.datetime "created_at",      :null => false
@@ -80,9 +78,7 @@ ActiveRecord::Schema.define(:version => 20120212002652) do
     t.string   "sex"
     t.integer  "typeDOI"
     t.integer  "numeroDOI"
-    t.string   "email"
     t.integer  "phone"
-    t.string   "password"
     t.date     "birthday"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false

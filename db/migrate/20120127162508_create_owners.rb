@@ -1,7 +1,6 @@
 class CreateOwners < ActiveRecord::Migration
   def change
     create_table :owners do |t|
-      t.string :name
       t.string :firtsName
       t.string :secondName
       t.string :sex
@@ -9,7 +8,6 @@ class CreateOwners < ActiveRecord::Migration
       t.integer :numeroDOI
       t.integer :phone
       t.date :birthday
-
       t.timestamps
     end
   end
