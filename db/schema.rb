@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120212003013) do
+ActiveRecord::Schema.define(:version => 20120212002652) do
 
   create_table "customers", :force => true do |t|
     t.string   "name"
@@ -151,10 +151,12 @@ ActiveRecord::Schema.define(:version => 20120212003013) do
     t.string   "password_salt"
     t.string   "persistence_token"
     t.string   "email"
+    t.integer  "typeuser_id"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
-    t.integer  "typeuser_id"
   end
+
+  add_index "users", ["typeuser_id"], :name => "index_users_on_typeuser_id"
 
   create_table "week_days", :force => true do |t|
     t.string   "name"
