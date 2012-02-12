@@ -2,10 +2,6 @@
 
 <%= form_for @search do |f| %>   
 <p>   
-<%= f.label :name_contains %>   
-<%= f.text_field :name_contains %>   
-</p> 
-<p>   
 <%= f.label :firtsName_contains %>   
 <%= f.text_field :firtsName_contains %>   
 </p>
@@ -26,15 +22,12 @@
 
 <table>
   <tr>
-    <th>Name</th>
     <th>Firtsname</th>
     <th>Secondname</th>
     <th>Sex</th>
     <th>Typedoi</th>
     <th>Numerodoi</th>
-    <th>Email</th>
     <th>Phone</th>
-    <th>Password</th>
     <th>Birthday</th>
     <th></th>
     <th></th>
@@ -43,15 +36,12 @@
 
 <% @owners.each do |owner| %>
   <tr>
-    <td><%= owner.name %></td>
     <td><%= owner.firtsName %></td>
     <td><%= owner.secondName %></td>
     <td><%= owner.sex.name %></td>
     <td><%= owner.typedocument.name %></td>
     <td><%= owner.numeroDOI %></td>
-    <td><%= owner.email %></td>
     <td><%= owner.phone %></td>
-    <td><%= owner.password %></td>
     <td><%= owner.birthday.strftime("%d/%m/%Y") %></td>
     <td><%= link_to 'Show', owner %></td>
 	<td><%= link_to 'Edit', edit_owner_path(owner) %></td>

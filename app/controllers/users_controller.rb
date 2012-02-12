@@ -64,7 +64,11 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to portales_url, notice: 'successfully updated profile.' }
+		if current_user.typeuser_id == 1
+			format.html { redirect_to duenonew_url, notice: 'successfully updated profile.' }
+		else
+			format.html { redirect_to customersnew_url, notice: 'successfully updated profile.' }
+		end
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

@@ -3,10 +3,6 @@
 
 <%= form_for @search do |f| %>   
 <p>   
-<%= f.label :name_contains %>   
-<%= f.text_field :name_contains %>   
-</p> 
-<p>   
 <%= f.label :firtsName_contains %>   
 <%= f.text_field :firtsName_contains %>   
 </p>
@@ -28,7 +24,6 @@
 
 <table>
   <tr>
-    <th>Name</th>
     <th>Firtsname</th>
     <th>Secondname</th>
 	<th>Sex_id</th>
@@ -36,8 +31,6 @@
     <th>Numerodoi</th>
     <th>Address</th>
 	<th>District</th>
-    <th>Email</th>
-    <th>Password</th>
     <th>Birthday</th>
     <th>Phone</th>
     <th></th>
@@ -47,7 +40,6 @@
 
 <% @customers.each do |customer| %>
   <tr>
-    <td><%= customer.name %></td>
     <td><%= customer.firtsName %></td>
     <td><%= customer.secondName %></td>
 	<td><%= customer.sex.name %></td>
@@ -55,8 +47,6 @@
     <td><%= customer.numeroDOI %></td>
     <td><%= customer.address %></td>
 	<td><%= customer.district.name %></td>
-    <td><%= customer.email %></td>
-    <td><%= customer.password %></td>
     <td><%= customer.birthday %></td>
     <td><%= customer.phone %></td>
     <td><%= link_to 'Show', customer %></td>
