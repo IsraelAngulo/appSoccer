@@ -1,4 +1,6 @@
 AppSoccer::Application.routes.draw do
+  resources :typeusers
+
   resources :user_sessions
 
   resources :portals

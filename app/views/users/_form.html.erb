@@ -20,6 +20,10 @@
          <%= f.text_field :email %>
   </div>
 	   
+  <div class="field">
+       <%= f.association :typeuser , :label => 'Type User:', :required => true %>
+  </div>
+  
   <div class="actions">
     <%= f.button :submit %>
   </div>

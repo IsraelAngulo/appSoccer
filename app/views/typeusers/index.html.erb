@@ -1,0 +1,23 @@
+<h1>Listing typeusers</h1>
+
+<table>
+  <tr>
+    <th>Namedescription</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @typeusers.each do |typeuser| %>
+  <tr>
+    <td><%= typeuser.nameDescription %></td>
+    <td><%= link_to 'Show', typeuser %></td>
+    <td><%= link_to 'Edit', edit_typeuser_path(typeuser) %></td>
+    <td><%= link_to 'Destroy', typeuser, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Typeuser', new_typeuser_path %>

@@ -5,6 +5,7 @@
     <th>Username</th>
     <th>Password</th>
     <th>Email</th>
+	<th>Type User</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
     <td><%= user.username %></td>
     <td><%= user.password %></td>
     <td><%= user.email %></td>
+	<td><%= user.typeuser.nameDescription %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>

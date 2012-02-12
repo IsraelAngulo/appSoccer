@@ -11,3 +11,17 @@ rails g migration add_district_id_to_customers district_id:integer
 rake db:migrate
 
 rails s
+
+Colocar en el Model
+
+customer
+belongs_to:typeuser
+
+Owner
+belongs_to:typeuser
+
+user
+belongs_to:typeuser
+
+TypeUser
+belongs_to:user
