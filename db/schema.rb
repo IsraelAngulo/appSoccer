@@ -14,7 +14,6 @@
 ActiveRecord::Schema.define(:version => 20120212002652) do
 
   create_table "customers", :force => true do |t|
-    t.string   "name"
     t.string   "firtsName"
     t.string   "secondName"
     t.integer  "numeroDOI"
@@ -72,7 +71,6 @@ ActiveRecord::Schema.define(:version => 20120212002652) do
   end
 
   create_table "owners", :force => true do |t|
-    t.string   "name"
     t.string   "firtsName"
     t.string   "secondName"
     t.string   "sex"

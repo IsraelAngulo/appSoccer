@@ -2,7 +2,7 @@
   <%= f.error_notification %>
 
   <div class="inputs">
-    <%= f.input :name, :label => 'Name:', :required => true, :input_html => { :maxlength => 20 }  %>
+    <%= f.input :username %>
     <%= f.input :firtsName, :label => 'Firts Name:', :required => true, :input_html => { :maxlength => 15 } %>
     <%= f.input :secondName , :label => 'Second Name:' , :input_html => { :maxlength => 15 } %>
 	<%= f.association :sex , :label => 'Sex:', :required => true %>
