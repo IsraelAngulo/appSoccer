@@ -11,7 +11,9 @@ AppSoccer::Application.routes.draw do
   match "login" => "user_sessions#new"
   match "logout" => "user_sessions#destroy"
   match "duenonew" => "owners#new"
+  match "duenoedit" => "owners#edit"
   match "customersnew" => "customers#new"
+  match "customersedit" => "customers#edit"
 
   resources :users
 

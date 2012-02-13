@@ -43,7 +43,10 @@ class OwnersController < ApplicationController
 
   # GET /owners/1/edit
   def edit
-    @owner = Owner.find(params[:id])
+	@search = Owner.search(params[current_user.username])   
+    @owners = @search.all  
+	@owner = @owners
+    #@owner = Owner.find(params[:id])
   end
 
   # POST /owners
@@ -69,7 +72,7 @@ class OwnersController < ApplicationController
 
     respond_to do |format|
       if @owner.update_attributes(params[:owner])
-        format.html { redirect_to @owner, notice: 'Owner was successfully updated.' }
+        format.html { redirect_to portales_url, notice: 'Owner was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

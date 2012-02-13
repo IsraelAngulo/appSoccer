@@ -31,7 +31,10 @@ class CustomersController < ApplicationController
 
   # GET /customers/1/edit
   def edit
-    @customer = Customer.find(params[:id])
+	@search = Customer.search(params[current_user.username])   
+    @customers = @search.all  
+	@customer = @customers
+    #@customer = Customer.find(params[:id])
   end
 
   # POST /customers
@@ -57,7 +60,7 @@ class CustomersController < ApplicationController
 
     respond_to do |format|
       if @customer.update_attributes(params[:customer])
-        format.html { redirect_to @customer, notice: 'Customer was successfully updated.' }
+        format.html { redirect_to portales_url, notice: 'Customer was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
