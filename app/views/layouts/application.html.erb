@@ -5,20 +5,44 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  
+  <link href="../assets/styles.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+	body {
+		background:#000 url(../assets/Images/bg-index.jpg) no-repeat center 60px;
+	}
+  </style>
+  
 </head>
 <body>
-<div id="user_nav">
-	<% if current_user %>
-		Bienvenido: <%= current_user.username %> |
+<% if current_user %>
+	<div id="user_nav" style="color:#00F">
+		  Bienvenido: <%= current_user.username %> | 
           <%= link_to "Edit Profile", edit_user_path(:current) %> |
           <%= link_to "Logout", logout_path %>
-     <% else %>
+	</div>
+	
+	<% if current_user.typeuser_id == 1 %> <!-- para dueno -->
+		<div style="color:#FFF">
+			<%= link_to "Registrar cancha de futbol", futboll_path %>
+		</div>
+	<% else %> <!-- para cliente -->
+		<div style="color:#FFF">
+			<%= link_to "Registrar cancha de futbol", futboll_path %>
+		</div>
+	<% end %>
+<% else %>
+	<div id="user_nav" style="color:#00F">
           <%= link_to "Register", new_user_path %> |
           <%= link_to "Login", login_path %>
-     <% end %>
+	</div>
+<% end %>
+
+<div class="login" style="color:#FFF">
+	<%= yield %>
 </div>
 
-<%= yield %>
+<div class="player-1"><img src="../assets/Images/player-1.png" width="480" height="640" alt="" /></div>
 
 </body>
 </html>
