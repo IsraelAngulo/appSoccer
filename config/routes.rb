@@ -10,7 +10,7 @@ AppSoccer::Application.routes.draw do
   match "portales" => "portals#index"
   match "login" => "user_sessions#new"
   match "logout" => "user_sessions#destroy"
-  match "futboll" => "fields#new"
+  match "fieldsnew" => "fields#new"
   match "duenonew" => "owners#new"
   match "duenoedit" => "owners#edit"
   match "customersnew" => "customers#new"

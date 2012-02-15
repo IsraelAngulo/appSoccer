@@ -147,9 +147,10 @@ ActiveRecord::Schema.define(:version => 20120212002652) do
     t.string   "password_salt"
     t.string   "persistence_token"
     t.string   "email"
+    t.string   "email_confirmation"
     t.integer  "typeuser_id"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   add_index "users", ["typeuser_id"], :name => "index_users_on_typeuser_id"

@@ -1,4 +1,12 @@
 class User < ActiveRecord::Base
 	acts_as_authentic
 	belongs_to :typeuser
+	
+	validate :check_email
+
+	def check_email
+		if email != email_confirmation
+			errors.add(:email, "doesn't match confirmation")
+		end
+	end
 end

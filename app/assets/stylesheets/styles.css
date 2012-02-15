@@ -1,5 +1,6 @@
 body {
-	background: url(Images/bg-body.jpg) repeat;
+	/*background: url(Images/bg-body.jpg) repeat;*/
+	background:#000 url(Images/bg-index.jpg) no-repeat center 60px;
 }
 a:link, a:visited {
 	text-decoration:none;
@@ -73,7 +74,7 @@ img {
 .login {
 	position:absolute;
 	left:640px;
-	top:360px;
+	top:200px;
 	/*width:480px;
 	height:244px;*/
 	z-index:1;
@@ -81,6 +82,7 @@ img {
 }
 .player-1 {
 	position:absolute;
+	background-image: url(Images/player-1.png);
 	left:120px;
 	top:80px;
 	width:480px;

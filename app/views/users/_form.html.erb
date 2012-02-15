@@ -1,42 +1,52 @@
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this gift from being saved:</h2>
+      <!--<h2><%= pluralize(@user.errors.count, "error") %> prohibited this gift from being saved:</h2>-->
 
-      <ul>
+      <ul style="color:#F00">
+	  <strong>
       <% @user.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
+	  </strong>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-	<%= f.label :username %>
-    <%= f.text_field :username %>
-  </div>
-  <div class="field">
-	<%= f.label :password %>
-	<%= f.password_field :password %>
-  </div>
-  <div class="field">
-	<%= f.label :password_confirmation %>
-	<%= f.password_field :password_confirmation %>
-  </div>
-  <div class="field">
-         <%= f.label :email %>
-         <%= f.text_field :email %>
-  </div>
-  <div class="field">
-         <%= f.label :email_confirmation %>
-         <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :typeuser %>
-    <%= f.collection_select :typeuser_id, Typeuser.all, :id, :nameDescription, :prompt => true %>
-  </div>
-  
-  <div class="actions">
+<div class="field">
+<table>
+<tr>
+	<td><%= f.label :username %></td>
+    <td><%= f.text_field :username %></td>
+</tr>
+	<td><%= f.label :password %></td>
+	<td><%= f.password_field :password %></td>
+</tr>
+<tr>
+	<td><%= f.label :password_confirmation %></td>
+	<td><%= f.password_field :password_confirmation %></td>
+</tr>
+<tr>
+	<td><%= f.label :email %></td>
+    <td><%= f.text_field :email %></td>
+</tr>
+<tr>
+	<td><%= f.label :email_confirmation %></td>
+	<td><%= f.text_field :email_confirmation %></td>
+</tr>
+
+<% if current_user == nil %>
+<tr>
+	<td><%= f.label :typeuser_id %></td>
+    <td><%= f.collection_select :typeuser_id, Typeuser.all, :id, :nameDescription, :prompt => true %></td>
+</tr>
+<% end %>
+
+</table>
+</div>
+<br><br>
+  <div class="actions" align="center">
     <%= f.button "Siguiente" %>
   </div>
 <% end %>
+<br>

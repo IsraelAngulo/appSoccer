@@ -6,12 +6,14 @@
     <%= f.input :firtsName , :label => 'Firts Name:', :required => true, :input_html => { :maxlength => 15 } %>
     <%= f.input :secondName , :label => 'Second Name:' , :input_html => { :maxlength => 15 } %>
     <%= f.association :typedocument , :label => 'Type Document:', :required => true %>
+	<%= f.input :numeroDOI , :label => 'Number Document:', :required => true, :input_html => { :maxlength => 10 } %>
 	<%= f.association :sex , :label => 'Sex:', :required => true %>
-    <%= f.input :numeroDOI , :label => 'Number Document:', :required => true, :input_html => { :maxlength => 10 } %>
     <%= f.input :phone , :label => 'Phone:', :input_html => { :maxlength => 10 } %>
     <%= f.input :birthday , :label => 'Your Birthday please' , :start_year => 1940 %>
   </div>
-  <div class="actions">
-    <%= f.button :submit %>
+<br><br>
+  <div class="actions" align="center">
+    <%= f.button :submit, :value => "Aceptar" %>
   </div>
 <% end %>
+<br>
