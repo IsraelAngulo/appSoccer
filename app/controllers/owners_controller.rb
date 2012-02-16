@@ -2,7 +2,6 @@ class OwnersController < ApplicationController
   # GET /owners
   # GET /owners.json
 
-
    def index
     @search = Owner.search(params[:search])   
     @owners = @search.all  
@@ -43,10 +42,15 @@ class OwnersController < ApplicationController
 
   # GET /owners/1/edit
   def edit
-	@search = Owner.search(params[current_user.username])   
-    @owners = @search.all  
-	@owner = @owners
-    #@owner = Owner.find(params[:id])
+	@search = Owner.where("username LIKE ?", "%#{ current_user.username }%")
+    @owners = @search.all
+	
+	#if @owners.count > 0
+		@owner = @owners
+		#@owner = Owner.find{params[:id]}
+	#else
+	#	format.html { redirect_to duenonew_url }
+	#end
   end
 
   # POST /owners

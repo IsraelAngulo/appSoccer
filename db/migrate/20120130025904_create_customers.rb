@@ -4,10 +4,10 @@ class CreateCustomers < ActiveRecord::Migration
 	  t.string :username
       t.string :firtsName
       t.string :secondName
-      t.integer :numeroDOI
+      t.string :numeroDOI
       t.string :address
       t.date :birthday
-      t.integer :phone
+      t.string :phone
       t.timestamps
     end
   end

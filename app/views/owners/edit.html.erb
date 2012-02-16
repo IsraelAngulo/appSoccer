@@ -1,3 +1,11 @@
-<h1>Editar Due&ntilde;o</h1>
-
-<%= render 'form' %>
+<% if @owner.count > 0 %>
+	<h1>Editar Due&ntilde;o</h1>
+	
+	<%= render 'form' %>
+<% else %>
+	<h1>Nuevo Due&ntilde;o (Paso 2)</h1>
+	<strong>
+	<%= link_to 'Ingrese sus datos ==>', new_owner_path %>
+	</strong>
+	<br><br>
+<% end %>

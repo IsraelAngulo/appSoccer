@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(:version => 20120212002652) do
     t.string   "username"
     t.string   "firtsName"
     t.string   "secondName"
-    t.integer  "numeroDOI"
+    t.string   "numeroDOI"
     t.string   "address"
     t.date     "birthday"
-    t.integer  "phone"
+    t.string   "phone"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "typedocument_id"
@@ -77,8 +77,8 @@ ActiveRecord::Schema.define(:version => 20120212002652) do
     t.string   "secondName"
     t.string   "sex"
     t.integer  "typeDOI"
-    t.integer  "numeroDOI"
-    t.integer  "phone"
+    t.string   "numeroDOI"
+    t.string   "phone"
     t.date     "birthday"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
