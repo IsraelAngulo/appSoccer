@@ -1,3 +1,11 @@
-<h1>Editar Cliente</h1>
-
-<%= render 'form' %>
+<% if @customer.count > 0 %>
+	<h1>Editar Cliente</h1>
+	
+	<%= render 'form' %>
+<% else %>
+	<h1>Nuevo Cliente (Paso 2)</h1>
+	<strong>
+	<%= link_to 'Ingrese sus datos ==>', new_customer_path %>
+	</strong>
+	<br><br>
+<% end %>

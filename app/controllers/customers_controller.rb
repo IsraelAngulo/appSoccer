@@ -31,10 +31,9 @@ class CustomersController < ApplicationController
 
   # GET /customers/1/edit
   def edit
-	@search = Customer.search(params[current_user.username])   
+	@search = Customer.where("username LIKE ?", "%#{ current_user.username }%")
     @customers = @search.all  
 	@customer = @customers
-    #@customer = Customer.find(params[:id])
   end
 
   # POST /customers

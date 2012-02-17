@@ -44,13 +44,7 @@ class OwnersController < ApplicationController
   def edit
 	@search = Owner.where("username LIKE ?", "%#{ current_user.username }%")
     @owners = @search.all
-	
-	#if @owners.count > 0
-		@owner = @owners
-		#@owner = Owner.find{params[:id]}
-	#else
-	#	format.html { redirect_to duenonew_url }
-	#end
+	@owner = @owners
   end
 
   # POST /owners
