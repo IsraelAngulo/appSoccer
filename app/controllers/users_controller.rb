@@ -45,9 +45,17 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
 		if current_user.typeuser_id == 1
-			format.html { redirect_to duenonew_url, notice: 'Registration successful.' }
+			@owner = Owner.new
+			@owner.username = current_user.username
+			@owner.save
+			
+			format.html { redirect_to root_url, notice: 'Registration successful.' }
 		else
-			format.html { redirect_to customersnew_url, notice: 'Registration successful.' }
+			@customer = Customer.new
+			@customer.username = current_user.username
+			@customer.save
+			
+			format.html { redirect_to root_url, notice: 'Registration successful.' }
 		end
         format.json { render json: @user, status: :created, location: @user }
       else

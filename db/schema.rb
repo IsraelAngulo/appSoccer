@@ -137,13 +137,18 @@ ActiveRecord::Schema.define(:version => 20120216200657) do
   end
 
   create_table "users", :force => true do |t|
+    t.string   "firstName"
+    t.string   "lastName"
+    t.string   "dni"
+    t.integer  "sex_id"
+    t.string   "phone"
+    t.date     "birthday"
+    t.string   "email"
+    t.string   "email_confirmation"
     t.string   "username"
     t.string   "crypted_password"
     t.string   "password_salt"
     t.string   "persistence_token"
-    t.string   "dni"
-    t.string   "email"
-    t.string   "email_confirmation"
     t.integer  "typeuser_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false

@@ -16,6 +16,30 @@
 <div class="field">
 <table>
 <tr>
+	<td><%= f.label :firstName %></td>
+	<td><%= f.text_field :firstName, :required => true, :input_html => { :maxlength => 15 } %></td>
+</tr>
+<tr>
+	<td><%= f.label :lastName %></td>
+    <td><%= f.text_field :lastName, :input_html => { :maxlength => 15 } %></td>
+</tr>
+<tr>
+	<td><%= f.label :dni %></td>
+    <td><%= f.text_field :dni %></td>
+</tr>
+<tr>
+	<td><%= f.label :sex_id %></td>
+    <td><%= f.collection_select :sex_id, Sex.all, :id, :name, :prompt => true, :required => true %></td>
+</tr>
+<tr>
+	<td><%= f.label :phone %></td>
+    <td><%= f.text_field :phone, :input_html => { :maxlength => 10 } %></td>
+</tr>
+<tr>
+	<td><%= f.label :birthday %></td>
+    <td><%= f.date_select :birthday %></td>
+</tr>
+<tr>
 	<td><%= f.label :username %></td>
     <td><%= f.text_field :username %></td>
 </tr>
@@ -27,16 +51,12 @@
 	<td><%= f.password_field :password_confirmation %></td>
 </tr>
 <tr>
-	<td><%= f.label :dni %></td>
-    <td><%= f.text_field :dni %></td>
-</tr>
-<tr>
 	<td><%= f.label :email %></td>
-    <td><%= f.text_field :email %></td>
+    <td><%= f.email_field :email %></td>
 </tr>
 <tr>
 	<td><%= f.label :email_confirmation %></td>
-	<td><%= f.text_field :email_confirmation %></td>
+	<td><%= f.email_field :email_confirmation %></td>
 </tr>
 
 <% if current_user == nil %>
@@ -50,7 +70,7 @@
 </div>
 <br><br>
   <div class="actions" align="center">
-    <%= f.button "Siguiente" %>
+    <%= f.button "Aceptar" %>
   </div>
 <% end %>
 <br>

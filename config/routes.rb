@@ -1,4 +1,6 @@
 AppSoccer::Application.routes.draw do
+  resources :typedocuments
+
   resources :products
 
   resources :typeusers
