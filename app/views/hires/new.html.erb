@@ -5,14 +5,24 @@
 	Por favor haga click en 
 	<%= link_to 'Register', new_user_path %> o 
 	<%= link_to 'Login', new_user_session_path %>
+	 como cliente
 	<br><br>
 	
-<% else %>
-
-	<h1>New hire</h1>
-
-	<%= render 'form' %>
-
-	<%= link_to 'Back', hires_path %>
+<% else
+	if current_user.typeuser_id ==1 %>
 	
-<% end %>
+		<h1>Usted no esta logeado como cliente</h1>
+		
+		Por favor, tiene que logearse como cliente 
+		<%= link_to "==> Logout <==", logout_path %>
+		<br><br>
+		
+	<% else %>
+		<h1>New hire</h1>
+
+		<%= render 'form' %>
+
+		<%= link_to 'Back', hires_path %>
+	
+<% end 
+end %>
