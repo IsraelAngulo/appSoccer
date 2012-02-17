@@ -17,13 +17,11 @@ ActiveRecord::Schema.define(:version => 20120216200657) do
     t.string   "username"
     t.string   "firtsName"
     t.string   "secondName"
-    t.string   "numeroDOI"
     t.string   "address"
     t.date     "birthday"
     t.string   "phone"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-    t.integer  "typedocument_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "sex_id"
     t.integer  "district_id"
   end
@@ -76,13 +74,10 @@ ActiveRecord::Schema.define(:version => 20120216200657) do
     t.string   "firtsName"
     t.string   "secondName"
     t.string   "sex"
-    t.integer  "typeDOI"
-    t.string   "numeroDOI"
     t.string   "phone"
     t.date     "birthday"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-    t.integer  "typedocument_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.integer  "sex_id"
   end
 
@@ -128,12 +123,6 @@ ActiveRecord::Schema.define(:version => 20120216200657) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "typedocuments", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "typeusers", :force => true do |t|
     t.string   "nameDescription"
     t.datetime "created_at",      :null => false
@@ -152,6 +141,7 @@ ActiveRecord::Schema.define(:version => 20120216200657) do
     t.string   "crypted_password"
     t.string   "password_salt"
     t.string   "persistence_token"
+    t.string   "dni"
     t.string   "email"
     t.string   "email_confirmation"
     t.integer  "typeuser_id"

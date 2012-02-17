@@ -4,7 +4,6 @@ class CreateCustomers < ActiveRecord::Migration
 	  t.string :username
       t.string :firtsName
       t.string :secondName
-      t.string :numeroDOI
       t.string :address
       t.date :birthday
       t.string :phone

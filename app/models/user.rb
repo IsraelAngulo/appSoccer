@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
 	acts_as_authentic
 	belongs_to :typeuser
 	
+	validates_uniqueness_of :dni
+	
 	validate :check_email
 
 	def check_email

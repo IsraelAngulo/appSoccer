@@ -6,8 +6,6 @@
     <%= f.input :firtsName, :label => 'Firts Name:', :required => true, :input_html => { :maxlength => 15 } %>
     <%= f.input :secondName , :label => 'Second Name:' , :input_html => { :maxlength => 15 } %>
 	<%= f.association :sex , :label => 'Sex:', :required => true %>
-	<%= f.association :typedocument , :label => 'Type Document:', :required => true %>
-    <%= f.input :numeroDOI , :label => 'Number Document:', :required => true, :input_html => { :maxlength => 10 } %>
     <%= f.input :address , :label =>'Address:' , :required => true, :input_html =>{ :maxlength => 80} %> 
 	<%= f.association :district , :label => 'District:', :required => true %>
     <%= f.input :birthday  , :label => 'Your Birthday please' , :start_year => 1940 %>

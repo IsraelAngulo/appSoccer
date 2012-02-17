@@ -5,8 +5,6 @@ class CreateOwners < ActiveRecord::Migration
       t.string :firtsName
       t.string :secondName
       t.string :sex
-      t.integer :typeDOI
-      t.string :numeroDOI
       t.string :phone
       t.date :birthday
       t.timestamps

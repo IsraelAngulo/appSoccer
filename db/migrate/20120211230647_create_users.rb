@@ -5,6 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :crypted_password
       t.string :password_salt
       t.string :persistence_token
+	  t.string :dni
       t.string :email
 	  t.string :email_confirmation
 	  t.references :typeuser
