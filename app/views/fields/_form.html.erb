@@ -1,8 +1,11 @@
 <%= simple_form_for(@field) do |f| %>
   <%= f.error_notification %>
 
+<div class="field">
+	<%= f.label :local_id %>
+	<%= f.collection_select :local_id, Local.all, :id, :descriptiveNameLocal, :prompt => true, :required => true %>
+</div>
   <div class="inputs">
-	<%= f.association :local %>
     <%= f.input :name %>
     <%= f.input :day %>
     <%= f.input :starname %>
