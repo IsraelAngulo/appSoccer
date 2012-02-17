@@ -36,14 +36,10 @@
     <td><%= field.endtime.strftime("%l:%M %p") %></td>
     <td><%= field.dayprice %></td>
     <td><%= field.nightprice %></td>
-    <td><%= link_to 'Show', field %></td>
-    <td><%= link_to 'Edit', edit_field_path(field) %></td>
-    <td><%= link_to 'Destroy', field, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Alquilar', new_hire_path %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-
-<%= link_to 'New Field', new_field_path %>

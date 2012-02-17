@@ -44,7 +44,7 @@ class UserSessionsController < ApplicationController
 
     respond_to do |format|
       if @user_session.save
-        format.html { redirect_to portales_url, notice: 'successfully logged in.' }
+        format.html { redirect_to root_url, notice: 'successfully logged in.' }
         format.json { render json: @user_session, status: :created, location: @user_session }
       else
         format.html { render action: "new" }
@@ -76,7 +76,7 @@ class UserSessionsController < ApplicationController
     @user_session.destroy
 
     respond_to do |format|
-      format.html { redirect_to portales_url, notice: 'successfully logged out.' }
+      format.html { redirect_to root_url, notice: 'successfully logged out.' }
       format.json { head :no_content }
     end
   end

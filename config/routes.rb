@@ -9,7 +9,7 @@ AppSoccer::Application.routes.draw do
 
   resources :portals
   
-  root :to => "portals#index"
+  root :to => "fields#index"
   
   match "portales" => "portals#index"
   match "login" => "user_sessions#new"

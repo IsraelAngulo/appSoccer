@@ -2,13 +2,11 @@ class FieldsController < ApplicationController
   # GET /fields
   # GET /fields.json
   
-   
-def index
+  def index
     @search = Field.search(params[:search])   
     @fields = @search.all  
   end
 
-  
   def search
     @field = Field.find(params[:id])
 
