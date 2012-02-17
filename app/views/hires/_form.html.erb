@@ -2,6 +2,7 @@
   <%= f.error_notification %>
 
   <div class="inputs">
+    <%= f.input :username, :input_html => { :value => current_user.username, :readonly => "readonly" } %>
     <%= f.association :field %>
     <%= f.input :dayCare %>
     <%= f.input :hoursCare %>

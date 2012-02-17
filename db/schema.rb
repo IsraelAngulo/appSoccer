@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20120217182028) do
   end
 
   create_table "hires", :force => true do |t|
+    t.string   "username"
     t.integer  "field_id"
     t.date     "dayCare"
     t.time     "hoursCare"

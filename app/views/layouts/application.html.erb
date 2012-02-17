@@ -21,9 +21,15 @@
 			<%= link_to "Publicar Eventos", eventindex_path %> |
 			<%= link_to "Registrar Albunes", photoalbum_path %>
 		</div>
-	<% else %> <!-- para cliente -->
+	<% elsif current_user.typeuser_id == 2 %> <!-- para cliente -->
 		<div style="color:#FFF">
 			<%= link_to "Alquilar Canchas", field_path %>
+		</div>
+	<% else %> <!-- para administrador -->
+		<div style="color:#FFF">
+			<%= link_to "Agregar sexo", new_sex_path %> |
+			<%= link_to "Agregar Tipo de documento", new_typedocument_path %> |
+			<%= link_to "Agregar distrito", new_district_path %>
 		</div>
 	<% end %>
 <% else %>

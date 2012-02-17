@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>username</th>
     <th>Field</th>
     <th>Daycare</th>
     <th>Hourscare</th>
@@ -12,6 +13,7 @@
 
 <% @hires.each do |hire| %>
   <tr>
+    <td><%= hire.username %></td>
     <td><%= hire.field.name %></td>
     <td><%= hire.dayCare %></td>
     <td><%= hire.hoursCare %></td>
