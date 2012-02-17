@@ -2,7 +2,7 @@
   <%= f.error_notification %>
 
   <div class="inputs">
-    <%= f.input :descriptiveNameLocal , :label => 'Descriptive Name Local:', :required => true, :input_html => { :maxlength => 20 }  %>
+    <%= f.input :descriptiveNameLocal , :label => 'Name Local:', :required => true, :input_html => { :maxlength => 20 }  %>
     <%= f.association :district , :label => 'District:', :required => true %>
 	<%= f.input :address , :label => 'Address:', :required => true, :input_html => { :maxlength => 20 }  %>
 	<%= f.input :addressinGoogleMaps , :label => 'Address in Google Maps:', :required => true, :input_html => { :maxlength => 20 }  %>

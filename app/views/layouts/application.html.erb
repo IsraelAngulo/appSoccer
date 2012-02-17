@@ -16,7 +16,10 @@
 	
 	<% if current_user.typeuser_id == 1 %> <!-- para dueno -->
 		<div style="color:#FFF">
+			<%= link_to "Registrar local", localnew_path %>
 			<%= link_to "Registrar cancha de futbol", fieldsnew_path %>
+			<%= link_to "Publicar Eventos", eventindex_path %>
+			<%= link_to "Registrar Albunes", photoalbum_path %>
 		</div>
 	<% else %> <!-- para cliente -->
 		<div style="color:#FFF">

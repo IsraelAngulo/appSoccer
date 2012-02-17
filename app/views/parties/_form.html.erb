@@ -2,10 +2,10 @@
   <%= f.error_notification %>
 
   <div class="inputs">
-    <%= f.input :name %>
-    <%= f.input :award %>
-    <%= f.input :limitvolumeteam %>
-    <%= f.input :limitdateregistration %>
+    <%= f.input :name , :required => true %>
+    <%= f.input :award , :required => true %>
+    <%= f.input :limitvolumeteam , :required => true %>
+    <%= f.input :limitdateregistration , :required => true %>
   </div>
 
   <div class="actions">

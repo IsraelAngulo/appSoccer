@@ -1,4 +1,6 @@
 AppSoccer::Application.routes.draw do
+  resources :products
+
   resources :typeusers
 
   resources :user_sessions
@@ -15,6 +17,9 @@ AppSoccer::Application.routes.draw do
   match "duenoedit" => "owners#edit"
   match "customersnew" => "customers#new"
   match "customersedit" => "customers#edit"
+  match "localnew" => "locals#new"
+  match "eventindex" => "parties#index"
+  match "photoalbum" => "photoalbums#index"
 
   resources :users
 
