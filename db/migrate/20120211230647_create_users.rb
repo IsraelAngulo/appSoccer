@@ -3,6 +3,7 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
 	  t.string :firstName
       t.string :lastName
+	  t.references :typedocument
 	  t.string :dni
       t.references :sex
       t.string :phone
