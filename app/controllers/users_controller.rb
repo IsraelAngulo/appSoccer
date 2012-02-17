@@ -48,15 +48,12 @@ class UsersController < ApplicationController
 			@owner = Owner.new
 			@owner.username = current_user.username
 			@owner.save
-			
-			format.html { redirect_to root_url, notice: 'Registration successful.' }
 		else
 			@customer = Customer.new
 			@customer.username = current_user.username
 			@customer.save
-			
-			format.html { redirect_to root_url, notice: 'Registration successful.' }
 		end
+		format.html { redirect_to root_url, notice: 'Registration successful.' }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
@@ -72,11 +69,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-		if current_user.typeuser_id == 1
-			format.html { redirect_to duenoedit_url, notice: 'successfully updated profile.' }
-		else
-			format.html { redirect_to customersedit_url, notice: 'successfully updated profile.' }
-		end
+		format.html { redirect_to root_url, notice: 'successfully updated profile.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

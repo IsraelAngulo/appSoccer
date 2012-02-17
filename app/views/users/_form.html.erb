@@ -44,6 +44,26 @@
     <td><%= f.date_select :birthday %></td>
 </tr>
 <tr>
+	<td><%= f.label :email %></td>
+    <td><%= f.email_field :email %></td>
+</tr>
+<tr>
+	<td><%= f.label :email_confirmation %></td>
+	<td><%= f.email_field :email_confirmation %></td>
+</tr>
+<% if current_user == nil %>
+<tr>
+	<td><%= f.label :typeuser_id %></td>
+    <td><%= f.collection_select :typeuser_id, Typeuser.all, :id, :nameDescription, :prompt => true, :required => true %></td>
+</tr>
+<% end %>
+</table>
+
+<br>
+
+<% if current_user == nil %>
+<table border=1>
+<tr>
 	<td><%= f.label :username %></td>
     <td><%= f.text_field :username %></td>
 </tr>
@@ -54,23 +74,9 @@
 	<td><%= f.label :password_confirmation %></td>
 	<td><%= f.password_field :password_confirmation %></td>
 </tr>
-<tr>
-	<td><%= f.label :email %></td>
-    <td><%= f.email_field :email %></td>
-</tr>
-<tr>
-	<td><%= f.label :email_confirmation %></td>
-	<td><%= f.email_field :email_confirmation %></td>
-</tr>
-
-<% if current_user == nil %>
-<tr>
-	<td><%= f.label :typeuser_id %></td>
-    <td><%= f.collection_select :typeuser_id, Typeuser.all, :id, :nameDescription, :prompt => true, :required => true %></td>
-</tr>
+</table>
 <% end %>
 
-</table>
 </div>
 <br><br>
   <div class="actions" align="center">
